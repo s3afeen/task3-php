@@ -1,0 +1,118 @@
+//////////////////////////////////////////////////////
+
+Databases are a place to store data in tables
+and consist of rows (record) of the data record 
+and columns (attribute) of the data type.
+
+///////////////////////////
+
+SQL (relational) is a programming language that stores 
+information and through which the database is controlled
+
+///////////////////////////
+
+Database Management Systems (DBMS)
+
+
+relational : enhanced version of DBMS but with relations, examples
+SQLServer, Oracle, MySQL.
+
+non-relational : File System, XML.
+
+////////////////////////////
+
+MySQL is a relational database management system (RDBMS),
+one of the most widely used in the world.
+
+/////////////////////////////////////////////////////
+
+#numbers
+
+    1-integer = 470
+    2-float = 4,70
+    3-boolian = true , false
+
+#string
+
+    1-char = (20)
+    2-varchar = (255)
+    3-text = (65000 byte)
+
+#data time
+
+    1-date
+    2-time
+    3-date-time
+    4-time-stamp
+
+//////////////////////////
+
+A primary key is a field in a database that is used to 
+uniquely identify each record in a specific table, 
+such as a Jordanian national ID number
+
+//////////////////////////
+
+Used to determine whether a particular column
+in a table can contain NULL values ​​or not.
+
+CREATE TABLE الموظفين (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    الاسم VARCHAR(100) NOT NULL,
+    البريد الإلكتروني VARCHAR(100) NULL
+);
+
+//////////////////////////
+
+It is a property used in databases, especially MySQL,
+to automatically generate serial numbers when inserting
+new records into a table, such as a billing machine in a falafel restaurant.
+
+CREATE TABLE الموظفين (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    الاسم VARCHAR(100) NOT NULL,
+    البريد الإلكتروني VARCHAR(100) NULL
+);
+
+/////////////////////////////////////////////////////
+
+
+CREAT DATABASE StudentDB;
+//////////////////////////
+CREATE TABLE Students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    enrollment_date DATE
+);
+//////////////////////////
+INSERT INTO Students (id,name,email,enrollment_date) VALUES ('1','zaid','zaid@abc.com','2020')
+/////////////////////////
+UPDATE students
+SET email='zohal@abc.com'
+WHERE id=1;
+/////////////////////////
+DELETE FROM students
+WHERE id=1;
+////////////////////////
+USE StudentDB;
+///////////////////////
+CREATE TABLE employees(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    position VARCHAR(100),
+    hire_date DATE
+);
+///////////////////////
+INSERT INTO employees(id,name,position,hire_date) VALUES ('1','ali','Developer','2020-01-15')
+
+///////////////////////
+INSERT INTO employees(id,name,position,hire_date) VALUES ('2','sara','Developer','2024-01-15')
+
+///////////////////////
+INSERT INTO employees(id,name,position,hire_date) VALUES ('3','ahmad','marketing','2022-04-24')
+
+///////////////////////
+UPDATE employees
+SET position='scrum master'
+WHERE id=1
